@@ -1,9 +1,8 @@
 # Getting Started
 
 To start working with Lantern, download the latest [unbundled release] and place
-it in your world's `datapacks` folder. These ZIPs work as normal data packs, and
-are perfect for learning how Lantern works--however, distributing unbundled
-releases to end users is unacceptable.
+it in your world's `datapacks` folder. This method is perfect for learning how
+Lantern works, but is not suitable for distributing Lantern to end users.
 
 When you depend on Lantern, rather than using the `#minecraft:load` tag to
 initialize your data packs, you use `#lantern.1:resolve`. The function called
