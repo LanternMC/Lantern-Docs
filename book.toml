@@ -1,0 +1,11 @@
+[book]
+authors = ["Alluet"]
+description = "The documentation for the Lantern data pack library."
+title = "Lantern Documentation"
+multilingual = false
+src = "src"
+
+[output.html-taco]
+root-path = "https://lanternmc.com/docs/"
+print-path = "print/index.md"
+strip-index = true
