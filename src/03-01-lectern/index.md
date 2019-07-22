@@ -20,7 +20,16 @@ completely. It is, however, highly recommended that data packs add their
 namespace to the NBT path they choose to use. An `example` data pack would
 modify `Book.tag.example` to avoid conflicting with other data packs.
 
-The lectern provided by Lantern is incapable of resolving text components.
-[The sign] should be used instead.
+The lectern provided by Lantern cannot resolve text components. Use [the sign]
+instead.
 
-[The sign]: https://lanternmc.com/docs/03-02-sign/
+## Provided Tags
+
+Lantern currently only provides one tag of its own within the lectern.
+
+`Book.tag.lantern.Dimension` contains an `int` corresponding to the dimension
+the lectern is in. This allows data packs to confirm their current dimension
+without using an entity's `Dimension` tag. The value of this tag is `0` for the
+Overworld, `-1` for The Nether, and `1` for The End.
+
+[the sign]: https://lanternmc.com/docs/03-02-sign/

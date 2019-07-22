@@ -1,20 +1,27 @@
 # Compatibility
 
 This page is a reference for what is required for a data pack to be considered
-compatible with Lantern. This may be useful not only for data packs that depend
-on Lantern, but also those that do not.
+compatible with Lantern. This is a useful reference for external data packs 
 
 ## Location
 
-The cuboid from `-30000000 0 8880` to `-29999985 1 8895` is reserved for Lantern
-internal use. Modifying blocks in this area is strictly forbidden, except when
-specifically allowed in this documentation.
+In each dimension, the cuboid from `-30000000 0 8880` to `-29999985 1 8895` is
+reserved for Lantern internal use. Modifying blocks in this area is strictly
+forbidden, except when specifically allowed in this documentation.
 
-## UUID
+Additionally, data packs that depend on Lantern are encouraged to use the cuboid
+from `-30000000 2 8880` to `-29999985 255 8895` for any purpose, and should not
+impose additional restrictions on these positions.
+
+Therefore, a library that wishes to provide its own forceloaded utilities should
+use its own chunk, rather than the chunk at `-30000000 0 8880`.
+
+## Entity + UUID
 
 The UUID `cb-0-0-0-1` is reserved for an armor stand provided by Lantern. Data
-packs that do not depend on Lantern may use neither the armor stand nor its
-UUID.
+packs must not kill the armor stand or not leave it outside of a Lantern
+forceloaded chunk. Additionally, summoning another entity with the same UUID is
+expressly forbidden.
 
 ## Loot Table
 

@@ -10,7 +10,5 @@ initialized.
 It is for these features that Lantern offers the `#lantern.1:post_resolve` tag,
 which runs immediately after the `#lantern.1:resolve` tag. Post-resolution is a
 time for library data packs to use values given by their dependent packs to aid
-in an extended initialization process. For example, Lantern waits until
-post-resolution to determine whether dimension tags will be enabled, as it is
-only then when one can be sure that all data packs communicated their
-preference.
+in an extended initialization process; for example, waiting until this point to
+compute some constants to store in the `lantern.const` objective.
